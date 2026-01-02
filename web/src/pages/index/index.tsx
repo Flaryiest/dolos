@@ -22,7 +22,7 @@ export default function IndexPage() {
                         <p className="section-one-alert-text">Applications Open</p>
                         <Link to="/contact" className="section-one-alert-link">Apply Now</Link>
                     </div>
-                    <h1 className="section-one-title">The microSaaS foundry for the next generation of founders</h1>
+                    <h1 className="section-one-title">The microSaaS foundry for the next generation</h1>
                     <p className="section-one-description">We back young builders with funding, mentorship, and resources to turn ideas into profitable software businesses.</p>
                     <Link to="/contact" className="section-one-signup-link">Start Building</Link>
                 </div>
