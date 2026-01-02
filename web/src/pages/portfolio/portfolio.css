@@ -1,0 +1,347 @@
+.portfolio-page {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #f8fafc 0%, #e0f2fe 50%, #bae6fd 100%);
+}
+
+/* Hero Section */
+.portfolio-hero {
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.portfolio-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #0284c7;
+    margin-bottom: 1.5rem;
+}
+
+.portfolio-hero h1 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: #1e293b;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.portfolio-hero p {
+    font-size: 1.25rem;
+    color: #64748b;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Portfolio Grid */
+.portfolio-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.portfolio-card {
+    background: white;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.portfolio-card.active {
+    border-color: #0ea5e9;
+}
+
+.card-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+}
+
+.card-status.active {
+    background: rgba(14, 165, 233, 0.1);
+    color: #0284c7;
+}
+
+.card-status.upcoming {
+    background: rgba(148, 163, 184, 0.15);
+    color: #64748b;
+}
+
+.card-status.completed {
+    background: rgba(34, 197, 94, 0.1);
+    color: #16a34a;
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.card-status.upcoming .status-dot,
+.card-status.completed .status-dot {
+    animation: none;
+}
+
+.portfolio-card h3 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+}
+
+.portfolio-card .card-type {
+    font-size: 0.85rem;
+    color: #0284c7;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.portfolio-card p {
+    font-size: 0.95rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.meta-tag {
+    font-size: 0.75rem;
+    color: #64748b;
+    background: rgba(148, 163, 184, 0.1);
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.sprint-info {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.sprint-info strong {
+    color: #1e293b;
+}
+
+.card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #0284c7;
+    text-decoration: none;
+    transition: gap 0.2s ease;
+}
+
+.card-link:hover {
+    gap: 0.75rem;
+}
+
+.card-link svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Coming Soon Cards */
+.portfolio-card.coming-soon {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.portfolio-card.coming-soon h3 {
+    color: #94a3b8;
+}
+
+/* Sprint Timeline */
+.sprint-section {
+    padding: 4rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.sprint-section h2 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #1e293b;
+    text-align: center;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+}
+
+.sprint-section > p {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 3rem;
+}
+
+.sprint-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sprint-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.sprint-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sprint-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #e2e8f0;
+    border: 2px solid #e2e8f0;
+}
+
+.sprint-dot.active {
+    background: #0ea5e9;
+    border-color: #0ea5e9;
+    box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.2);
+}
+
+.sprint-dot.completed {
+    background: #22c55e;
+    border-color: #22c55e;
+}
+
+.sprint-line {
+    width: 2px;
+    height: 40px;
+    background: #e2e8f0;
+}
+
+.sprint-content {
+    flex: 1;
+    padding-bottom: 1.5rem;
+}
+
+.sprint-content h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.25rem;
+}
+
+.sprint-content p {
+    font-size: 0.875rem;
+    color: #64748b;
+}
+
+.sprint-content span {
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+/* Investor CTA */
+.investor-cta {
+    padding: 6rem 2rem;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.investor-cta h2 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #1e293b;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.investor-cta p {
+    font-size: 1.1rem;
+    color: #64748b;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.investor-cta a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #0284c7;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.investor-cta a:hover {
+    background: #0369a1;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .portfolio-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .investor-cta h2 {
+        font-size: 2rem;
+    }
+}
