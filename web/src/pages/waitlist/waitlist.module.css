@@ -1,0 +1,329 @@
+.waitlistPage {
+    min-height: 100vh;
+    display: flex;
+    background: linear-gradient(135deg, #ffe089 0%, #ef9dff 100%);
+}
+
+.waitlistContainer {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.waitlistLeft {
+    width: 50%;
+    display: flex;
+    background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 50%, #f9a8d4 100%);
+    color: #000;
+    padding: 3rem;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.waitlistHero {
+    max-width: 450px;
+    text-align: left;
+}
+
+.heroContent {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.heroTitle {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    background: linear-gradient(135deg, #831843, #be185d, #db2777);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+}
+
+.heroSubtitle {
+    font-size: 1.3rem;
+    color: #000;
+    opacity: 0.8;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.launchInfo {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: 2px solid rgba(131, 24, 67, 0.2);
+}
+
+.launchTitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #831843;
+    margin: 0 0 0.5rem 0;
+}
+
+.launchDate {
+    font-size: 1rem;
+    color: #000;
+    opacity: 0.9;
+    margin: 0;
+}
+
+.waitlistRight {
+    width: 50%;
+    background: rgba(40, 40, 40, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.formContainer {
+    background: transparent;
+    width: 100%;
+    max-width: 400px;
+}
+
+.formHeader {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.formTitle {
+    font-size: 1.8rem;
+    font-weight: 650;
+    color: white;
+    margin: 0 0 1rem 0;
+}
+
+.formSubtitle {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.waitlistForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.formLabel {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+}
+
+.formInput {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(249, 168, 212, 0.3);
+    border-radius: 0.5rem;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    font-family: "Inter";
+    color: white;
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+
+.formInput:focus {
+    border-color: #f9a8d4;
+}
+
+.formInput::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.formInput.error {
+    border-color: #ef4444;
+}
+
+.turnstileWidget {
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem 0;
+}
+
+.turnstileWidget > div {
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.errorMessage {
+    font-size: 0.75rem;
+    color: #ef4444;
+    margin: 0;
+}
+
+.successMessage {
+    font-size: 0.9rem;
+    color: #10b981;
+    margin: 0;
+    text-align: center;
+    padding: 1rem;
+    background: rgba(16, 185, 129, 0.1);
+    border-radius: 0.5rem;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.joinButton {
+    background: white;
+    color: #000;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Inter";
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.joinButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+}
+
+.joinButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.loginLink {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.loginLink a {
+    color: #f9a8d4;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.loginLink a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 1028px) {
+    .waitlistLeft {
+        width: 40%;
+        padding: 2rem;
+    }
+
+    .waitlistRight {
+        width: 60%;
+        
+    }
+
+    .heroTitle {
+        font-size: 2.5rem;
+    }
+
+    .heroSubtitle {
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .waitlistPage {
+        background: rgba(40, 40, 40, 0.95);
+        padding-top: 100px;
+    }
+
+    .waitlistContainer {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .waitlistLeft {
+        width: 100%;
+        padding-top: 100px;
+        padding: 2rem 1.5rem 1rem 1.5rem;
+        background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 50%, #f9a8d4 100%);
+        height: auto;
+        align-items: flex-start;
+    }
+
+    .waitlistRight {
+        width: 100%;
+        background: transparent;
+        padding: 1rem 1.5rem 2rem 1.5rem;
+    }
+
+    .waitlistHero {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .heroContent {
+        gap: 1.5rem;
+    }
+
+    .heroTitle {
+        font-size: 2.2rem;
+    }
+
+    .heroSubtitle {
+        font-size: 1rem;
+    }
+
+    .formContainer {
+        max-width: 100%;
+    }
+
+    .formHeader {
+        margin-bottom: 2rem;
+    }
+
+    .formTitle {
+        font-size: 1.6rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .waitlistLeft {
+        padding: 1.5rem 1rem;
+    }
+
+    .waitlistRight {
+        padding: 1rem;
+    }
+
+    .heroTitle {
+        font-size: 1.8rem;
+    }
+
+    .heroSubtitle {
+        font-size: 0.9rem;
+    }
+
+    .launchInfo {
+        padding: 1rem;
+    }
+
+    .formTitle {
+        font-size: 1.4rem;
+    }
+
+    .formSubtitle {
+        font-size: 0.9rem;
+    }
+}
