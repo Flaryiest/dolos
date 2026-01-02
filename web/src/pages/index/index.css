@@ -619,6 +619,7 @@
     padding: 5rem 2rem;
     margin-top: 3rem;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .metrics-container {
@@ -889,6 +890,7 @@
     padding: 4rem 2rem;
     width: 100%;
     color: #1e293b;
+    box-sizing: border-box;
 }
 
 .features-dashboard-container {
