@@ -25,10 +25,9 @@ export default function Navbar() {
                     <ul className="navbar-links desktop-only">
                         <li><Link to="/portfolio" className="navbar-link">Portfolio</Link></li>
                         <li><Link to="/careers" className="navbar-link">Careers</Link></li>
-                        <li><Link to="/contact" className="navbar-link">Contact</Link></li>
                     </ul>
                     <div className="navbar-actions desktop-only">
-                        <Link to="/contact" className="navbar-action navbar-signup">Join Us</Link>
+                        <Link to="/contact" className="navbar-action navbar-signup">Contact</Link>
                     </div>
 
                     {/* Hamburger Menu Button */}
@@ -48,10 +47,9 @@ export default function Navbar() {
                         <ul className="mobile-menu-links">
                             <li><Link to="/portfolio" className="mobile-menu-link" onClick={closeMenu}>Portfolio</Link></li>
                             <li><Link to="/careers" className="mobile-menu-link" onClick={closeMenu}>Careers</Link></li>
-                            <li><Link to="/contact" className="mobile-menu-link" onClick={closeMenu}>Contact</Link></li>
                         </ul>
                         <div className="mobile-menu-actions">
-                            <Link to="/contact" className="mobile-menu-signup" onClick={closeMenu}>Join Us</Link>
+                            <Link to="/contact" className="mobile-menu-signup" onClick={closeMenu}>Contact</Link>
                         </div>
                     </div>
                 </div>
