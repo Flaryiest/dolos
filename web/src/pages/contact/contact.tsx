@@ -1,7 +1,6 @@
 import "./contact.css"
 import Navbar from "../../components/navbar/navbar.tsx"
 import Footer from "../../components/footer/footer.tsx"
-import { Link } from "react-router-dom"
 
 export default function ContactPage() {
     return <>
