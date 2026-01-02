@@ -26,31 +26,6 @@ export default function IndexPage() {
                     <p className="section-one-description">We back young builders with funding, mentorship, and resources to turn ideas into profitable software businesses.</p>
                     <Link to="/contact" className="section-one-signup-link">Start Building</Link>
                 </div>
-                <div className="homework-visual">
-                        <div className="paper-stack">
-                            <div className="paper paper-back"></div>
-                            <div className="paper paper-middle"></div>
-                            <div className="paper paper-front">
-                                <div className="paper-header">
-                                    <div className="assignment-title">Your SaaS Product</div>
-                                    <div className="due-date">Launch Ready</div>
-                                </div>
-                                <div className="paper-content">
-                                    <div className="content-line long"></div>
-                                    <div className="content-line medium"></div>
-                                    <div className="content-line long"></div>
-                                    <div className="content-line short"></div>
-                                    <div className="content-line medium"></div>
-                                    <div className="content-line long"></div>
-                                    <div className="content-line short"></div>
-                                    <div className="content-line medium"></div>
-                                </div>
-                                <div className="paper-highlight">
-                                    <div className="highlight-text">$MRR</div>
-                                </div>
-                            </div>
-                        </div>
-                </div>
             <div className="how-it-works-background"></div>
             {/* Steps Section */}
             <div className="steps-section">

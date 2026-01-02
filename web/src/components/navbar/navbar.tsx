@@ -18,7 +18,7 @@ export default function Navbar() {
             <div className="navbar-container">
                 <nav className="navbar">
                     <h1 className="navbar-title"><Link to="/" className="navbar-logo-container">
-                    <img src="/logo.png" alt="Logo" className="navbar-logo" />
+                    <img src="/logo.png" alt="." className="navbar-logo" />
                     <p>Foundry</p></Link></h1>
 
                     {/* Desktop Navigation */}
