@@ -340,7 +340,16 @@
 
 @media (max-width: 768px) {
     .north-star-container {
-        display: none;
+        position: relative;
+        right: auto;
+        bottom: auto;
+        margin: 2rem auto 0;
+        width: 180px;
+        height: 180px;
+    }
+    
+    .hero-wrapper {
+        align-items: center;
     }
 }
 
@@ -372,6 +381,20 @@
     width: clamp(300px, 40vw, 500px);
     height: clamp(240px, 32vw, 400px);
     perspective: 1000px;
+    z-index: 1;
+}
+
+.how-it-works-section {
+    background: transparent;
+    padding: 6rem 2rem;
+    padding-top: 14rem;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: auto;
     z-index: 1;
 }
 
@@ -506,7 +529,8 @@
     
     .how-it-works-section {
         padding: 3rem 1rem;
-        margin-top: 280px;
+        padding-top: 1rem;
+        margin-top: 0;
         position: relative;
         top: auto;
         height: auto;
@@ -635,19 +659,7 @@
     }
 }
 
-.how-it-works-section {
-    background: transparent;
-    padding: 6rem 2rem;
-    padding-top: 14rem;
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    min-height: auto;
-    z-index: 1;
-}
+
 
 .how-it-works-background {
     display: none;
