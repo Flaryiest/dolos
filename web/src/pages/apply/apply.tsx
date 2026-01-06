@@ -204,13 +204,22 @@ function MultipleChoiceStep({
     )
 }
 
-function SubmitStep({ onBack, formData }: { onBack: () => void; formData: FormData }) {
+function SubmitStep({ formData, workArrangementOptions, roleOptions }: { 
+    formData: FormData;
+    workArrangementOptions: { label: string; value: string }[];
+    roleOptions: { label: string; value: string }[];
+}) {
     const [submitted, setSubmitted] = useState(false)
 
     const handleSubmit = () => {
         // Dummy submit - just log and show success
         console.log("Form submitted:", formData)
         setSubmitted(true)
+    }
+
+    // Helper to convert values to labels
+    const getLabels = (values: string[], options: { label: string; value: string }[]) => {
+        return values.map(v => options.find(o => o.value === v)?.label || v).join(", ")
     }
 
     if (submitted) {
@@ -244,15 +253,39 @@ function SubmitStep({ onBack, formData }: { onBack: () => void; formData: FormDa
             <div className="review-summary">
                 <div className="review-item">
                     <span className="review-label">Name</span>
-                    <span className="review-value">{formData.fullName}</span>
+                    <span className="review-value">{formData.fullName || "—"}</span>
                 </div>
                 <div className="review-item">
                     <span className="review-label">Email</span>
-                    <span className="review-value">{formData.email}</span>
+                    <span className="review-value">{formData.email || "—"}</span>
                 </div>
+                {formData.linkedin && (
+                    <div className="review-item">
+                        <span className="review-label">LinkedIn</span>
+                        <span className="review-value review-value-link">{formData.linkedin}</span>
+                    </div>
+                )}
+                {formData.portfolio && (
+                    <div className="review-item">
+                        <span className="review-label">Portfolio</span>
+                        <span className="review-value review-value-link">{formData.portfolio}</span>
+                    </div>
+                )}
                 <div className="review-item">
                     <span className="review-label">Age</span>
-                    <span className="review-value">{formData.age}</span>
+                    <span className="review-value">{formData.age || "—"}</span>
+                </div>
+                <div className="review-item">
+                    <span className="review-label">School</span>
+                    <span className="review-value">{formData.school || "—"}</span>
+                </div>
+                <div className="review-item">
+                    <span className="review-label">Work Arrangement</span>
+                    <span className="review-value">{getLabels(formData.workArrangement, workArrangementOptions) || "—"}</span>
+                </div>
+                <div className="review-item">
+                    <span className="review-label">Roles</span>
+                    <span className="review-value">{getLabels(formData.roles, roleOptions) || "—"}</span>
                 </div>
             </div>
             <button className="submit-button" onClick={handleSubmit}>
@@ -430,7 +463,7 @@ export default function ApplyPage() {
                     />
                 )
             case 9:
-                return <SubmitStep onBack={goBack} formData={formData} />
+                return <SubmitStep formData={formData} workArrangementOptions={workArrangementOptions} roleOptions={roleOptions} />
             default:
                 return null
         }
