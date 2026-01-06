@@ -10,12 +10,6 @@ export default function IndexPage() {
             <div className="section-one-background">
             
             </div>
-            <div className="how-it-works-section">
-                <div className="how-it-works-container">
-                    <p className="how-it-works-subtitle">How It Works</p>
-                    <h2 className="how-it-works-title">We partner with ambitious founders under 20 to build, launch, and scale microSaaS products that generate real revenue</h2>
-                </div>
-            </div>
 
                 <div className="section-one-container">
                     <div className="section-one-alert">
@@ -26,7 +20,14 @@ export default function IndexPage() {
                     <p className="section-one-description">We back young builders with funding, mentorship, and resources to turn ideas into profitable software businesses.</p>
                     <Link to="/contact" className="section-one-signup-link">Start Building</Link>
                 </div>
-            <div className="how-it-works-background"></div>
+
+            <div className="how-it-works-section">
+                <div className="how-it-works-container">
+                    <p className="how-it-works-subtitle">How It Works</p>
+                    <h2 className="how-it-works-title">We partner with ambitious founders under 20 to build, launch, and scale microSaaS products that generate real revenue</h2>
+                </div>
+            </div>
+
             {/* Steps Section */}
             <div className="steps-section">
                 <div className="steps-container">

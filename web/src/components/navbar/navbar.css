@@ -17,7 +17,9 @@
     gap: 2rem;
     justify-content: space-between;
     border-radius: 0rem;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(10, 10, 15, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
     padding: 14px 24px;
     align-items: center;
 }
@@ -33,7 +35,7 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: black;
+    color: var(--text-primary);
 }
 
 .navbar-title {
@@ -44,6 +46,7 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
+    color: var(--text-primary);
 }
 
 .navbar-links {
@@ -68,12 +71,13 @@
     display: flex;
     align-items: center;
     gap: 0.3rem;
+    color: var(--text-secondary);
 }
 
 .dropdown-arrow {
     font-size: 0.6rem;
     transition: transform 0.3s ease;
-    color: rgb(70, 70, 70);
+    color: var(--text-muted);
 }
 
 .dropdown-arrow.open {
@@ -85,10 +89,10 @@
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background: white;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: var(--space-bg-card);
+    border: 1px solid var(--border-light);
     border-radius: 0.8rem;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 0 0 30px var(--accent-primary-glow);
     min-width: 200px;
     padding: 0.5rem 0;
     margin-top: 0.5rem;
@@ -110,10 +114,10 @@
 .dropdown-item {
     display: block;
     padding: 0.75rem 1.5rem;
-    color: rgb(70, 70, 70);
+    color: var(--text-secondary);
     text-decoration: none;
     transition: all 0.3s ease;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid var(--border-subtle);
     z-index: 10002;
     position: relative;
 }
@@ -123,12 +127,12 @@
 }
 
 .dropdown-item:hover {
-    background: rgba(249, 168, 212, 0.1);
-    color: #831843;
+    background: rgba(0, 212, 255, 0.1);
+    color: var(--accent-primary);
 }
 
 .navbar-link {
-    color: rgba(60, 60, 60, 0.7);
+    color: var(--text-secondary);
     text-decoration: none;
     transition: color 0.3s ease;
     font-size: 0.875rem;
@@ -137,7 +141,7 @@
 }
 
 .navbar-link:hover {
-    color: rgb(0, 0, 0);
+    color: var(--accent-primary);
 }
 
 .navbar-actions {
@@ -149,24 +153,25 @@
 }
 
 .navbar-action {
-    color: rgb(0, 0, 0);
+    color: var(--text-primary);
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 .navbar-signup {
-    background-color: black;
-    color: white;
+    background: var(--accent-gradient);
+    color: var(--space-bg-primary);
     padding: 0.5rem 1.25rem;
     border-radius: 0.375rem;
     font-weight: 500;
     font-size: 0.875rem;
     letter-spacing: 0.01em;
+    box-shadow: 0 0 20px var(--accent-primary-glow);
 }
 
 .navbar-signup:hover {
-    background-color: #1a1a1a;
     transform: translateY(-1px);
+    box-shadow: 0 0 30px var(--accent-primary-glow);
 }
 
 /* Hamburger Menu Button */
@@ -183,7 +188,7 @@
 .hamburger-line {
     width: 25px;
     height: 3px;
-    background-color: #333;
+    background-color: var(--text-primary);
     border-radius: 2px;
     transition: all 0.3s ease;
 }
@@ -195,7 +200,8 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(5, 5, 8, 0.95);
+    backdrop-filter: blur(10px);
     z-index: 10001;
     display: flex;
     align-items: flex-start;
@@ -216,7 +222,7 @@
     right: 0;
     background: none;
     border: none;
-    color: white;
+    color: var(--text-primary);
     font-size: 2.5rem;
     cursor: pointer;
     padding: 0.5rem;
@@ -225,7 +231,7 @@
 }
 
 .mobile-menu-close:hover {
-    color: #0ea5e9;
+    color: var(--accent-primary);
 }
 
 .mobile-menu-links {
@@ -238,42 +244,43 @@
 }
 
 .mobile-menu-link {
-    color: white;
+    color: var(--text-primary);
     font-size: 1.3rem;
     font-weight: 500;
     text-decoration: none;
     transition: all 0.3s ease;
     padding: 0.75rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--border-subtle);
     display: block;
 }
 
 .mobile-menu-link:hover {
-    color: #0ea5e9;
+    color: var(--accent-primary);
     transform: translateX(10px);
 }
 
 .mobile-menu-actions {
     margin-top: 2rem;
     padding-top: 1.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid var(--border-light);
 }
 
 .mobile-menu-signup {
     display: inline-block;
-    background: #0ea5e9;
-    color: white;
+    background: var(--accent-gradient);
+    color: var(--space-bg-primary);
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
     font-weight: 500;
     font-size: 1rem;
     text-decoration: none;
     transition: all 0.3s ease;
+    box-shadow: 0 0 20px var(--accent-primary-glow);
 }
 
 .mobile-menu-signup:hover {
-    background: #0284c7;
     transform: translateY(-2px);
+    box-shadow: 0 0 30px var(--accent-primary-glow);
 }
 
 .mobile-menu-content {

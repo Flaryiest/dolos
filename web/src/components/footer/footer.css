@@ -5,6 +5,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(22, 22, 22);
-    color: white;
+    background-color: var(--space-bg-deep);
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border-subtle);
+    position: relative;
+    z-index: 1;
 }

@@ -1,6 +1,8 @@
 .contact-page {
     min-height: 100vh;
-    background: linear-gradient(180deg, #f8fafc 0%, #e0f2fe 50%, #bae6fd 100%);
+    background: var(--space-bg-primary);
+    position: relative;
+    z-index: 1;
 }
 
 /* Hero Section */
@@ -9,11 +11,27 @@
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
+    position: relative;
+}
+
+.contact-hero::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 400px;
+    background: radial-gradient(ellipse at center, var(--accent-primary-glow), transparent 60%),
+                radial-gradient(ellipse at 70% 30%, var(--accent-secondary-glow), transparent 50%);
+    opacity: 0.4;
+    pointer-events: none;
 }
 
 .contact-hero-content {
     max-width: 600px;
     margin: 0 auto;
+    position: relative;
 }
 
 .contact-label {
@@ -21,7 +39,7 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    color: #0284c7;
+    color: var(--accent-primary);
     margin-bottom: 1.5rem;
 }
 
@@ -29,7 +47,7 @@
     font-family: "Bricolage Grotesque", sans-serif;
     font-size: 3.5rem;
     font-weight: 500;
-    color: #1e293b;
+    color: var(--text-primary);
     letter-spacing: -0.03em;
     line-height: 1.1;
     margin-bottom: 1.5rem;
@@ -37,7 +55,7 @@
 
 .contact-hero-description {
     font-size: 1.125rem;
-    color: #64748b;
+    color: var(--text-secondary);
     line-height: 1.7;
     max-width: 500px;
     margin: 0 auto;
@@ -64,7 +82,7 @@
 .contact-method-icon {
     width: 36px;
     height: 36px;
-    color: #0284c7;
+    color: var(--accent-primary);
     flex-shrink: 0;
 }
 
@@ -77,7 +95,7 @@
     font-family: "Bricolage Grotesque", sans-serif;
     font-size: 0.8rem;
     font-weight: 500;
-    color: #64748b;
+    color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 0.125rem;
@@ -86,13 +104,13 @@
 .contact-method-content a {
     font-size: 1rem;
     font-weight: 500;
-    color: #1e293b;
+    color: var(--text-primary);
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 .contact-method-content a:hover {
-    color: #0284c7;
+    color: var(--accent-primary);
 }
 
 /* Who Should Reach Out Section */
@@ -106,7 +124,7 @@
     font-family: "Bricolage Grotesque", sans-serif;
     font-size: 1.5rem;
     font-weight: 500;
-    color: #1e293b;
+    color: var(--text-primary);
     margin-bottom: 2.5rem;
     letter-spacing: -0.02em;
     text-align: center;
@@ -123,9 +141,15 @@
     align-items: flex-start;
     gap: 1.25rem;
     padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.5);
+    background: var(--space-bg-card);
     border-radius: 12px;
-    border: 1px solid rgba(148, 163, 184, 0.15);
+    border: 1px solid var(--border-light);
+    transition: all 0.2s ease;
+}
+
+.who-item:hover {
+    border-color: var(--border-accent);
+    box-shadow: 0 0 20px var(--accent-primary-glow);
 }
 
 .who-item:last-child {
@@ -136,7 +160,7 @@
 .who-icon {
     width: 28px;
     height: 28px;
-    color: #0284c7;
+    color: var(--accent-primary);
     flex-shrink: 0;
     margin-top: 0.125rem;
 }
@@ -150,14 +174,14 @@
     font-family: "Bricolage Grotesque", sans-serif;
     font-size: 1.1rem;
     font-weight: 500;
-    color: #1e293b;
+    color: var(--text-primary);
     margin-bottom: 0.375rem;
     letter-spacing: -0.01em;
 }
 
 .who-content p {
     font-size: 0.95rem;
-    color: #64748b;
+    color: var(--text-secondary);
     line-height: 1.6;
 }
 
@@ -175,7 +199,7 @@
 
 .contact-footer-note p {
     font-size: 0.9rem;
-    color: #64748b;
+    color: var(--text-muted);
 }
 
 .social-inline {
@@ -186,7 +210,7 @@
 .social-inline a {
     width: 36px;
     height: 36px;
-    color: #64748b;
+    color: var(--text-muted);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -194,7 +218,7 @@
 }
 
 .social-inline a:hover {
-    color: #0284c7;
+    color: var(--accent-primary);
 }
 
 .social-inline a svg {
