@@ -3,6 +3,7 @@ import HomePage from "./pages/index/index.tsx";
 import PortfolioPage from "./pages/portfolio/portfolio.tsx";
 import CareersPage from "./pages/careers/careers.tsx";
 import ContactPage from "./pages/contact/contact.tsx";
+import ApplyPage from "./pages/apply/apply.tsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -11,6 +12,7 @@ const router = createBrowserRouter(
       <Route path="/portfolio" element={<PortfolioPage />} />
       <Route path="/careers" element={<CareersPage />} />
       <Route path="/contact" element={<ContactPage />} />
+      <Route path="/apply" element={<ApplyPage />} />
     </>
   )
 );

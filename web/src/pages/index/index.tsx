@@ -39,11 +39,11 @@ export default function IndexPage() {
                     <div className="section-one-container">
                         <div className="section-one-alert hero-animate hero-delay-1">
                             <p className="section-one-alert-text">Applications Open</p>
-                            <Link to="/careers" className="section-one-alert-link">Apply Now</Link>
+                            <Link to="/apply" className="section-one-alert-link">Apply Now</Link>
                         </div>
                         <h1 className="section-one-title hero-animate hero-delay-2">The microSaaS studio for the next generation</h1>
                         <p className="section-one-description hero-animate hero-delay-3">We back young builders with funding, mentorship, and resources to turn ideas into profitable software businesses.</p>
-                        <Link to="/contact" className="section-one-signup-link hero-animate hero-delay-4">Start Building</Link>
+                        <Link to="/apply" className="section-one-signup-link hero-animate hero-delay-4">Start Building</Link>
                     </div>
 
                     {/* Isometric North Star */}
