@@ -39,7 +39,7 @@ export default function IndexPage() {
                     <div className="section-one-container">
                         <div className="section-one-alert hero-animate hero-delay-1">
                             <p className="section-one-alert-text">Applications Open</p>
-                            <Link to="/contact" className="section-one-alert-link">Apply Now</Link>
+                            <Link to="/careers" className="section-one-alert-link">Apply Now</Link>
                         </div>
                         <h1 className="section-one-title hero-animate hero-delay-2">The microSaaS studio for the next generation</h1>
                         <p className="section-one-description hero-animate hero-delay-3">We back young builders with funding, mentorship, and resources to turn ideas into profitable software businesses.</p>
@@ -272,7 +272,7 @@ export default function IndexPage() {
                     <h2 className="cta-title">Ready to build your first SaaS?</h2>
                     <p className="cta-description">Join the next cohort of young founders turning ideas into profitable software businesses.</p>
                     <div className="cta-buttons">
-                        <Link to="/contact" className="cta-primary">Apply Now</Link>
+                        <Link to="/apply" className="cta-primary">Apply Now</Link>
                     </div>
                 </div>
             </div>
