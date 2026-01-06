@@ -35,14 +35,29 @@ export default function IndexPage() {
             
             </div>
 
-                <div className="section-one-container">
-                    <div className="section-one-alert hero-animate hero-delay-1">
-                        <p className="section-one-alert-text">Applications Open</p>
-                        <Link to="/contact" className="section-one-alert-link">Apply Now</Link>
+                <div className="hero-wrapper">
+                    <div className="section-one-container">
+                        <div className="section-one-alert hero-animate hero-delay-1">
+                            <p className="section-one-alert-text">Applications Open</p>
+                            <Link to="/contact" className="section-one-alert-link">Apply Now</Link>
+                        </div>
+                        <h1 className="section-one-title hero-animate hero-delay-2">The microSaaS studio for the next generation</h1>
+                        <p className="section-one-description hero-animate hero-delay-3">We back young builders with funding, mentorship, and resources to turn ideas into profitable software businesses.</p>
+                        <Link to="/contact" className="section-one-signup-link hero-animate hero-delay-4">Start Building</Link>
                     </div>
-                    <h1 className="section-one-title hero-animate hero-delay-2">The microSaaS studio for the next generation</h1>
-                    <p className="section-one-description hero-animate hero-delay-3">We back young builders with funding, mentorship, and resources to turn ideas into profitable software businesses.</p>
-                    <Link to="/contact" className="section-one-signup-link hero-animate hero-delay-4">Start Building</Link>
+
+                    {/* Isometric North Star */}
+                    <div className="north-star-container">
+                        <div className="north-star">
+                            <div className="star-line star-line-1"></div>
+                            <div className="star-line star-line-2"></div>
+                            <div className="star-line star-line-3"></div>
+                            <div className="star-line star-line-4"></div>
+                            <div className="star-core"></div>
+                            <div className="star-ring star-ring-1"></div>
+                            <div className="star-ring star-ring-2"></div>
+                        </div>
+                    </div>
                 </div>
 
             <div className="how-it-works-section">
