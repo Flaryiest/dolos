@@ -40,7 +40,6 @@
     overflow: hidden;
     z-index: 3;
     box-sizing: border-box;
-    animation: fadeInUp 0.8s ease-out;
 }
 
 .section-one-alert {
@@ -53,7 +52,6 @@
     padding: 0.25rem 0.9rem;
     border-radius: 2rem;
     border: 1px solid rgba(0, 212, 255, 0.3);
-    animation: fadeInLeft 0.6s ease-out 0.2s both;
     transition: all 0.3s ease;
 }
 
@@ -90,7 +88,6 @@
     max-width: 32ch;
     color: var(--text-primary);
     letter-spacing: -0.02em;
-    animation: fadeInUp 0.7s ease-out 0.3s both;
 }
 
 .section-one-description {
@@ -99,7 +96,6 @@
     line-height: 1.7;
     max-width: 50%;
     color: var(--text-secondary);
-    animation: fadeInUp 0.7s ease-out 0.4s both;
 }
 
 .section-one-signup-link {
@@ -114,12 +110,35 @@
     text-decoration: none;
     transition: all 0.3s ease;
     box-shadow: 0 4px 20px var(--accent-primary-glow);
-    animation: fadeInUp 0.7s ease-out 0.5s both, subtlePulse 3s ease-in-out 1.5s infinite;
 }
 
 .section-one-signup-link:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 30px var(--accent-primary-glow);
+}
+
+/* Hero Section Animations - Immediate on page load with stagger */
+.hero-animate {
+    opacity: 0;
+    transform: translateY(25px);
+    animation: heroFadeIn 0.7s ease-out forwards;
+}
+
+@keyframes heroFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-delay-1 { animation-delay: 0.1s; }
+.hero-delay-2 { animation-delay: 0.25s; }
+.hero-delay-3 { animation-delay: 0.4s; }
+.hero-delay-4 { animation-delay: 0.55s; }
+
+/* Add pulse to CTA after it fades in */
+.section-one-signup-link.hero-animate {
+    animation: heroFadeIn 0.7s ease-out forwards, subtlePulse 3s ease-in-out 1.5s infinite;
 }
 
 /* Large Visual Element */
@@ -449,7 +468,6 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     margin: 0;
-    animation: fadeIn 0.6s ease-out;
 }
 
 .how-it-works-title {
@@ -462,7 +480,6 @@
     margin-left: auto;
     margin-right: auto;
     letter-spacing: -0.01em;
-    animation: fadeInUp 0.7s ease-out 0.2s both;
 }
 
 .steps-section {
@@ -499,12 +516,7 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     position: relative;
     z-index: 2;
-    animation: fadeInUp 0.6s ease-out both;
 }
-
-.step-card:nth-child(1) { animation-delay: 0.1s; }
-.step-card:nth-child(2) { animation-delay: 0.2s; }
-.step-card:nth-child(3) { animation-delay: 0.3s; }
 
 .step-card:hover {
     transform: translateY(-8px) scale(1.02);
@@ -666,7 +678,6 @@
 
 .metrics-header {
     padding-right: 2rem;
-    animation: fadeInLeft 0.7s ease-out;
 }
 
 .metrics-title {
@@ -694,7 +705,6 @@
     border-radius: 1rem;
     padding: 2rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    animation: fadeInRight 0.7s ease-out 0.2s both;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -728,13 +738,11 @@
     transition: all 0.3s ease;
     font-family: inherit;
     box-shadow: 0 0 20px var(--accent-primary-glow);
-    animation: subtlePulse 3s ease-in-out infinite;
 }
 
 .sidebar-cta:hover {
     transform: translateY(-3px) scale(1.02);
     box-shadow: 0 0 40px var(--accent-primary-glow);
-    animation: none;
 }
 
 .metrics-features {
@@ -952,7 +960,6 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    animation: fadeInUp 0.6s ease-out 0.1s both;
 }
 
 .collaborate-card {
@@ -1077,7 +1084,6 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    animation: fadeInUp 0.6s ease-out 0.2s both;
 }
 
 .messages-card {
@@ -1214,7 +1220,6 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    animation: fadeInUp 0.6s ease-out 0.3s both;
 }
 
 .brand-card {

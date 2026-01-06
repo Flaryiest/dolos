@@ -2,8 +2,32 @@ import "./index.css"
 import Navbar from "../../components/navbar/navbar.tsx"
 import Footer from "../../components/footer/footer.tsx"
 import { Link } from "react-router-dom"
+import { useEffect } from "react"
 
 export default function IndexPage() {
+    useEffect(() => {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Only animate once
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with animate-on-scroll class
+        const animatedElements = document.querySelectorAll('.animate-on-scroll');
+        animatedElements.forEach(el => observer.observe(el));
+
+        return () => observer.disconnect();
+    }, []);
+
     return <>
         <Navbar />
         <div className="index-page">
@@ -12,26 +36,26 @@ export default function IndexPage() {
             </div>
 
                 <div className="section-one-container">
-                    <div className="section-one-alert">
+                    <div className="section-one-alert hero-animate hero-delay-1">
                         <p className="section-one-alert-text">Applications Open</p>
                         <Link to="/contact" className="section-one-alert-link">Apply Now</Link>
                     </div>
-                    <h1 className="section-one-title">The microSaaS studio for the next generation</h1>
-                    <p className="section-one-description">We back young builders with funding, mentorship, and resources to turn ideas into profitable software businesses.</p>
-                    <Link to="/contact" className="section-one-signup-link">Start Building</Link>
+                    <h1 className="section-one-title hero-animate hero-delay-2">The microSaaS studio for the next generation</h1>
+                    <p className="section-one-description hero-animate hero-delay-3">We back young builders with funding, mentorship, and resources to turn ideas into profitable software businesses.</p>
+                    <Link to="/contact" className="section-one-signup-link hero-animate hero-delay-4">Start Building</Link>
                 </div>
 
             <div className="how-it-works-section">
                 <div className="how-it-works-container">
-                    <p className="how-it-works-subtitle">How It Works</p>
-                    <h2 className="how-it-works-title">We partner with ambitious founders under 20 to build, launch, and scale microSaaS products that generate real revenue</h2>
+                    <p className="how-it-works-subtitle animate-on-scroll">How It Works</p>
+                    <h2 className="how-it-works-title animate-on-scroll">We partner with ambitious founders under 20 to build, launch, and scale microSaaS products that generate real revenue</h2>
                 </div>
             </div>
 
             {/* Steps Section */}
             <div className="steps-section">
                 <div className="steps-container">
-                    <div className="step-card">
+                    <div className="step-card animate-on-scroll">
                         <div className="step-number">01</div>
                         <h3 className="step-title">Apply with Your Idea</h3>
                         <p className="step-description">Share your microSaaS concept or problem you want to solve. We look for passion, grit, and a willingness to learn—not perfect pitches.</p>
@@ -39,7 +63,7 @@ export default function IndexPage() {
                             <div className="placeholder-text">Image</div>
                         </div>
                     </div>
-                    <div className="step-card">
+                    <div className="step-card animate-on-scroll">
                         <div className="step-number">02</div>
                         <h3 className="step-title">Build Together</h3>
                         <p className="step-description">Get hands-on support from experienced founders. We help with product development, go-to-market strategy, and everything in between.</p>
@@ -47,7 +71,7 @@ export default function IndexPage() {
                             <div className="placeholder-text">Image</div>
                         </div>
                     </div>
-                    <div className="step-card">
+                    <div className="step-card animate-on-scroll">
                         <div className="step-number">03</div>
                         <h3 className="step-title">Launch & Scale</h3>
                         <p className="step-description">Ship your product, acquire your first customers, and build sustainable recurring revenue with ongoing mentorship and resources.</p>
@@ -62,14 +86,14 @@ export default function IndexPage() {
             <div className="metrics-section">
                 <div className="metrics-container">
                     <div className="metrics-content">
-                        <div className="metrics-header">
+                        <div className="metrics-header animate-on-scroll">
                             <h2 className="metrics-title">
                                 <span className="highlight-brand">The best time to start</span> building is when you're young. 
                                 No mortgage, no dependents, unlimited energy— 
                                 <span className="highlight-brand">your risk tolerance will never be higher</span> than it is right now
                             </h2>
                         </div>
-                        <div className="metrics-sidebar">
+                        <div className="metrics-sidebar animate-on-scroll">
                             <div className="sidebar-content">
                                 <h3 className="sidebar-title">Built by young founders, for young founders</h3>
                                 <p className="sidebar-description">
@@ -86,7 +110,7 @@ export default function IndexPage() {
             {/* Features Dashboard Section */}
             <div className="features-dashboard-section">
                 <div className="features-dashboard-container">
-                    <div className="features-left-column">
+                    <div className="features-left-column animate-on-scroll">
                         {/* Collaborate Card */}
                         <div className="feature-card-large collaborate-card">
                             <div className="card-content">
@@ -124,7 +148,7 @@ export default function IndexPage() {
                         </div>
                     </div>
 
-                    <div className="features-center-column">
+                    <div className="features-center-column animate-on-scroll">
                         {/* Chat/Messages Card */}
                         <div className="feature-card-tall messages-card">
                             <div className="messages-header">
@@ -196,7 +220,7 @@ export default function IndexPage() {
                         </div>
                     </div>
 
-                    <div className="features-right-column">
+                    <div className="features-right-column animate-on-scroll">
                         {/* Brand Card */}
                         <div className="feature-card-medium brand-card">
                             <div className="brand-content">
@@ -228,7 +252,7 @@ export default function IndexPage() {
                 </div>
             </div>
 
-            <div className="cta-section">
+            <div className="cta-section animate-on-scroll">
                 <div className="cta-container">
                     <h2 className="cta-title">Ready to build your first SaaS?</h2>
                     <p className="cta-description">Join the next cohort of young founders turning ideas into profitable software businesses.</p>

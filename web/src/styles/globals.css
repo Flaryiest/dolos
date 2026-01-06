@@ -405,10 +405,29 @@ input, select, textarea, button {
 /* Start hidden for animation reveals */
 .animate-on-scroll {
     opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .animate-on-scroll.visible {
-    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered animations for cards within containers */
+.animate-on-scroll.visible .step-card:nth-child(1),
+.animate-on-scroll.visible .feature-card:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.animate-on-scroll.visible .step-card:nth-child(2),
+.animate-on-scroll.visible .feature-card:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.animate-on-scroll.visible .step-card:nth-child(3),
+.animate-on-scroll.visible .feature-card:nth-child(3) {
+    transition-delay: 0.3s;
 }
 
 /* Reduced motion preference */
