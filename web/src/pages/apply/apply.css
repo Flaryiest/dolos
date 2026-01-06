@@ -155,21 +155,124 @@
 }
 
 .welcome-icon {
-    width: 80px;
-    height: 80px;
-    border-radius: 20px;
-    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary, #0066ff));
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, rgba(30, 30, 35, 1) 0%, rgba(10, 10, 12, 1) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1rem;
-    box-shadow: 0 0 40px var(--accent-primary-glow);
+    margin-bottom: 1.5rem;
+    box-shadow: 
+        0 0 60px rgba(255, 255, 255, 0.05),
+        inset 0 0 40px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.welcome-icon::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.03), transparent 50%);
 }
 
 .welcome-icon svg {
-    width: 40px;
-    height: 40px;
-    color: white;
+    width: 80px;
+    height: 80px;
+}
+
+/* Central star pulse */
+.central-star {
+    animation: centralPulse 3s ease-in-out infinite;
+}
+
+.central-glow {
+    animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes centralPulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.9; }
+}
+
+@keyframes glowPulse {
+    0%, 100% { transform: scale(1); opacity: 0.1; }
+    50% { transform: scale(1.5); opacity: 0.2; }
+}
+
+/* Constellation stars twinkle */
+.const-star {
+    animation: constTwinkle 4s ease-in-out infinite;
+}
+
+.const-star-1 { animation-delay: 0s; }
+.const-star-2 { animation-delay: 0.5s; }
+.const-star-3 { animation-delay: 1s; }
+.const-star-4 { animation-delay: 1.5s; }
+.const-star-5 { animation-delay: 2s; }
+.const-star-6 { animation-delay: 2.5s; }
+
+@keyframes constTwinkle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
+/* Distant stars subtle twinkle */
+.distant-star {
+    animation: distantTwinkle 5s ease-in-out infinite;
+}
+
+.distant-1 { animation-delay: 0s; }
+.distant-2 { animation-delay: 0.8s; }
+.distant-3 { animation-delay: 1.6s; }
+.distant-4 { animation-delay: 2.4s; }
+.distant-5 { animation-delay: 3.2s; }
+.distant-6 { animation-delay: 4s; }
+
+@keyframes distantTwinkle {
+    0%, 100% { opacity: 0.2; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+/* Orbiting bodies */
+.orbiting-1 {
+    animation: orbit1 12s linear infinite;
+    transform-origin: 40px 40px;
+    offset-path: path('M 4 40 A 36 14 0 1 1 76 40 A 36 14 0 1 1 4 40');
+    offset-rotate: 0deg;
+    animation: orbitPath1 8s linear infinite;
+}
+
+.orbiting-2 {
+    animation: orbit2 10s linear infinite reverse;
+    transform-origin: 40px 40px;
+}
+
+@keyframes orbitPath1 {
+    from { offset-distance: 0%; }
+    to { offset-distance: 100%; }
+}
+
+@keyframes orbit2 {
+    from { transform: rotate(0deg) translateX(28px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(28px) rotate(-360deg); }
+}
+
+/* Orbit lines subtle animation */
+.orbit {
+    animation: orbitFade 6s ease-in-out infinite;
+}
+
+.orbit-1 { animation-delay: 0s; }
+.orbit-2 { animation-delay: 1.5s; }
+.orbit-3 { animation-delay: 3s; }
+.orbit-4 { animation-delay: 4.5s; }
+
+@keyframes orbitFade {
+    0%, 100% { opacity: 0.15; }
+    50% { opacity: 0.25; }
 }
 
 .start-button {
@@ -512,14 +615,13 @@
     }
 
     .welcome-icon {
-        width: 64px;
-        height: 64px;
-        border-radius: 16px;
+        width: 100px;
+        height: 100px;
     }
 
     .welcome-icon svg {
-        width: 32px;
-        height: 32px;
+        width: 64px;
+        height: 64px;
     }
 
     .review-summary {

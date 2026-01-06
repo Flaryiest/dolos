@@ -24,8 +24,44 @@ function WelcomeStep({ onNext }: { onNext: () => void }) {
     return (
         <div className="step-content welcome-step">
             <div className="welcome-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                <svg viewBox="0 0 80 80" fill="none">
+                    {/* Orbital paths */}
+                    <ellipse cx="40" cy="40" rx="36" ry="14" stroke="white" strokeWidth="0.5" opacity="0.2" className="orbit orbit-1" />
+                    <ellipse cx="40" cy="40" rx="28" ry="28" stroke="white" strokeWidth="0.5" opacity="0.15" className="orbit orbit-2" />
+                    <ellipse cx="40" cy="40" rx="36" ry="14" stroke="white" strokeWidth="0.5" opacity="0.2" className="orbit orbit-3" style={{ transform: 'rotate(60deg)', transformOrigin: 'center' }} />
+                    <ellipse cx="40" cy="40" rx="36" ry="14" stroke="white" strokeWidth="0.5" opacity="0.2" className="orbit orbit-4" style={{ transform: 'rotate(120deg)', transformOrigin: 'center' }} />
+                    
+                    {/* Constellation lines */}
+                    <line x1="40" y1="40" x2="58" y2="28" stroke="white" strokeWidth="0.5" opacity="0.3" />
+                    <line x1="40" y1="40" x2="22" y2="52" stroke="white" strokeWidth="0.5" opacity="0.3" />
+                    <line x1="40" y1="40" x2="52" y2="58" stroke="white" strokeWidth="0.5" opacity="0.3" />
+                    <line x1="40" y1="40" x2="24" y2="26" stroke="white" strokeWidth="0.5" opacity="0.3" />
+                    <line x1="58" y1="28" x2="68" y2="22" stroke="white" strokeWidth="0.5" opacity="0.2" />
+                    <line x1="22" y1="52" x2="12" y2="58" stroke="white" strokeWidth="0.5" opacity="0.2" />
+                    
+                    {/* Central star */}
+                    <circle cx="40" cy="40" r="4" fill="white" className="central-star" />
+                    <circle cx="40" cy="40" r="8" fill="white" opacity="0.1" className="central-glow" />
+                    
+                    {/* Constellation stars */}
+                    <circle cx="58" cy="28" r="2.5" fill="white" className="const-star const-star-1" />
+                    <circle cx="22" cy="52" r="2" fill="white" className="const-star const-star-2" />
+                    <circle cx="52" cy="58" r="2" fill="white" className="const-star const-star-3" />
+                    <circle cx="24" cy="26" r="1.5" fill="white" className="const-star const-star-4" />
+                    <circle cx="68" cy="22" r="1.5" fill="white" className="const-star const-star-5" />
+                    <circle cx="12" cy="58" r="1" fill="white" className="const-star const-star-6" />
+                    
+                    {/* Distant stars */}
+                    <circle cx="70" cy="40" r="1" fill="white" opacity="0.4" className="distant-star distant-1" />
+                    <circle cx="10" cy="35" r="0.8" fill="white" opacity="0.3" className="distant-star distant-2" />
+                    <circle cx="35" cy="12" r="1" fill="white" opacity="0.4" className="distant-star distant-3" />
+                    <circle cx="48" cy="70" r="0.8" fill="white" opacity="0.3" className="distant-star distant-4" />
+                    <circle cx="18" cy="18" r="0.6" fill="white" opacity="0.25" className="distant-star distant-5" />
+                    <circle cx="65" cy="60" r="0.6" fill="white" opacity="0.25" className="distant-star distant-6" />
+                    
+                    {/* Orbiting bodies */}
+                    <circle cx="40" cy="40" r="1.5" fill="white" className="orbiting-body orbiting-1" />
+                    <circle cx="40" cy="40" r="1" fill="white" opacity="0.6" className="orbiting-body orbiting-2" />
                 </svg>
             </div>
             <h1>Apply to Proximaz</h1>
