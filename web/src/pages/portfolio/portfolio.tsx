@@ -2,8 +2,23 @@ import "./portfolio.css"
 import Navbar from "../../components/navbar/navbar.tsx"
 import Footer from "../../components/footer/footer.tsx"
 import { Link } from "react-router-dom"
+import { useEffect } from "react"
 
 export default function PortfolioPage() {
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+        return () => observer.disconnect();
+    }, []);
+
     const projects = [
         {
             name: "GiveCRM",
@@ -36,16 +51,16 @@ export default function PortfolioPage() {
         <div className="portfolio-page">
             {/* Hero */}
             <div className="portfolio-hero">
-                <p className="portfolio-label">Portfolio</p>
-                <h1>Studio Companies</h1>
-                <p>We partner with ambitious young founders to build microSaaS products.</p>
+                <p className="portfolio-label animate-on-scroll">Portfolio</p>
+                <h1 className="animate-on-scroll">Studio Companies</h1>
+                <p className="animate-on-scroll">We partner with ambitious young founders to build microSaaS products.</p>
             </div>
 
             {/* Portfolio Grid */}
             <div className="portfolio-section">
                 <div className="portfolio-grid">
                     {projects.map((project, index) => (
-                        <div className={`project-card ${project.status}`} key={index}>
+                        <div className={`project-card ${project.status} animate-on-scroll`} key={index}>
                             <div className="project-screenshot">
                                 <div className="screenshot-placeholder"></div>
                             </div>
@@ -79,7 +94,7 @@ export default function PortfolioPage() {
             </div>
 
             {/* Investor CTA */}
-            <div className="investor-cta">
+            <div className="investor-cta animate-on-scroll">
                 <h2>Interested in our portfolio?</h2>
                 <p>We're always open to connecting with investors who believe in backing the next generation of founders.</p>
                 <Link to="/contact">

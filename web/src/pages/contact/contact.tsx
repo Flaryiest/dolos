@@ -1,23 +1,38 @@
 import "./contact.css"
 import Navbar from "../../components/navbar/navbar.tsx"
 import Footer from "../../components/footer/footer.tsx"
+import { useEffect } from "react"
 
 export default function ContactPage() {
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+        return () => observer.disconnect();
+    }, []);
+
     return <>
         <Navbar />
         <div className="contact-page">
             {/* Hero */}
             <div className="contact-hero">
                 <div className="contact-hero-content">
-                    <p className="contact-label">Contact</p>
-                    <h1>Let's build<br />something together</h1>
-                    <p className="contact-hero-description">Whether you're a founder with an idea, an investor interested in our portfolio, or just want to connect—we'd love to hear from you.</p>
+                    <p className="contact-label animate-on-scroll">Contact</p>
+                    <h1 className="animate-on-scroll">Let's build<br />something together</h1>
+                    <p className="contact-hero-description animate-on-scroll">Whether you're a founder with an idea, an investor interested in our portfolio, or just want to connect—we'd love to hear from you.</p>
                 </div>
             </div>
 
             {/* Contact Methods */}
             <div className="contact-methods">
-                <div className="contact-method">
+                <div className="contact-method animate-on-scroll">
                     <div className="contact-method-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
@@ -30,7 +45,7 @@ export default function ContactPage() {
                     </div>
                 </div>
 
-                <div className="contact-method">
+                <div className="contact-method animate-on-scroll">
                     <div className="contact-method-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                             <line x1="12" y1="1" x2="12" y2="23"></line>
@@ -43,7 +58,7 @@ export default function ContactPage() {
                     </div>
                 </div>
 
-                <div className="contact-method">
+                <div className="contact-method animate-on-scroll">
                     <div className="contact-method-icon">
                         <svg viewBox="0 0 24 24" fill="currentColor">
                             <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
@@ -57,7 +72,7 @@ export default function ContactPage() {
             </div>
 
             {/* Who Should Reach Out */}
-            <div className="who-section">
+            <div className="who-section animate-on-scroll">
                 <h2>Who should reach out?</h2>
                 <div className="who-list">
                     <div className="who-item">
@@ -100,7 +115,7 @@ export default function ContactPage() {
             </div>
 
             {/* Footer Note */}
-            <div className="contact-footer-note">
+            <div className="contact-footer-note animate-on-scroll">
                 <p>We typically respond within 24-48 hours.</p>
                 <div className="social-inline">
                     <a href="https://twitter.com/proximaz_hq" target="_blank" rel="noopener noreferrer" aria-label="Twitter">

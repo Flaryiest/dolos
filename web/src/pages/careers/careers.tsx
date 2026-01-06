@@ -2,7 +2,7 @@ import "./careers.css"
 import Navbar from "../../components/navbar/navbar.tsx"
 import Footer from "../../components/footer/footer.tsx"
 import { Link } from "react-router-dom"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 type RoleCategory = "all" | "engineering" | "gtm" | "other"
 
@@ -19,6 +19,20 @@ interface Role {
 
 export default function CareersPage() {
     const [activeFilter, setActiveFilter] = useState<RoleCategory>("all")
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+        return () => observer.disconnect();
+    }, []);
 
     const roles: Role[] = [
         {
@@ -79,13 +93,13 @@ export default function CareersPage() {
         <div className="careers-page">
             {/* Hero */}
             <div className="careers-hero">
-                <p className="careers-label">We're Hiring</p>
-                <h1>Be part of our mission</h1>
-                <p>We're building a portfolio of microSaaS companies and looking for passionate people to join us. We value flat hierarchies, clear communication, and full ownership.</p>
+                <p className="careers-label animate-on-scroll">We're Hiring</p>
+                <h1 className="animate-on-scroll">Be part of our mission</h1>
+                <p className="animate-on-scroll">We're building a portfolio of microSaaS companies and looking for passionate people to join us. We value flat hierarchies, clear communication, and full ownership.</p>
             </div>
 
             {/* Filters */}
-            <div className="careers-filters">
+            <div className="careers-filters animate-on-scroll">
                 {filters.map(filter => (
                     <button
                         key={filter.key}
@@ -101,7 +115,7 @@ export default function CareersPage() {
             <div className="roles-section">
                 <div className="roles-list">
                     {filteredRoles.map(role => (
-                        <Link to="/contact" className="role-card" key={role.id}>
+                        <Link to="/contact" className="role-card animate-on-scroll" key={role.id}>
                             <div className="role-content">
                                 <h3>{role.title}</h3>
                                 <p>{role.description}</p>
@@ -127,7 +141,7 @@ export default function CareersPage() {
             </div>
 
             {/* Values */}
-            <div className="values-section">
+            <div className="values-section animate-on-scroll">
                 <h2>How we work</h2>
                 <div className="values-grid">
                     <div className="value-item">
