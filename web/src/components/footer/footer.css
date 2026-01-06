@@ -10,4 +10,9 @@
     border-top: 1px solid var(--border-subtle);
     position: relative;
     z-index: 1;
+    transition: border-color 0.3s ease;
+}
+
+.footer:hover {
+    border-top-color: var(--border-accent);
 }

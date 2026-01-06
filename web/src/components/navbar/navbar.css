@@ -8,6 +8,18 @@
     position: absolute;
     top: 0;
     z-index: 10000;
+    animation: fadeInDown 0.6s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .navbar {
@@ -22,6 +34,12 @@
     border: 1px solid rgba(255, 255, 255, 0.06);
     padding: 14px 24px;
     align-items: center;
+    transition: all 0.3s ease;
+}
+
+.navbar:hover {
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
 .navbar-logo {
@@ -134,14 +152,30 @@
 .navbar-link {
     color: var(--text-secondary);
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
     font-size: 0.875rem;
     font-weight: 500;
     letter-spacing: 0.01em;
+    position: relative;
+}
+
+.navbar-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-gradient);
+    transition: width 0.3s ease;
 }
 
 .navbar-link:hover {
     color: var(--accent-primary);
+}
+
+.navbar-link:hover::after {
+    width: 100%;
 }
 
 .navbar-actions {
@@ -167,12 +201,12 @@
     font-size: 0.875rem;
     letter-spacing: 0.01em;
     box-shadow: 0 0 20px var(--accent-primary-glow);
+    transition: all 0.3s ease;
 }
 
 .navbar-signup:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 0 30px var(--accent-primary-glow);
-}
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 0 35px var(--accent-primary-glow);\n}
 
 /* Hamburger Menu Button */
 .hamburger-button {
