@@ -32,7 +32,7 @@ export default function CareersPage() {
 
         document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
         return () => observer.disconnect();
-    }, []);
+    }, [activeFilter]); // Re-run observer when filter changes
 
     const roles: Role[] = [
         {

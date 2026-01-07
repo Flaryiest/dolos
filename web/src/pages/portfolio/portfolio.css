@@ -14,19 +14,6 @@
     position: relative;
 }
 
-.portfolio-hero::before {
-    content: '';
-    position: absolute;
-    top: -100px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 600px;
-    height: 400px;
-    background: var(--accent-primary-glow);
-    opacity: 0.3;
-    pointer-events: none;
-}
-
 .portfolio-label {
     font-size: 0.75rem;
     font-weight: 600;

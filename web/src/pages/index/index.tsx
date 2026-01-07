@@ -74,24 +74,66 @@ export default function IndexPage() {
                         <div className="step-number">01</div>
                         <h3 className="step-title">Apply with Your Idea</h3>
                         <p className="step-description">Share your microSaaS concept or problem you want to solve. We look for passion, grit, and a willingness to learn—not perfect pitches.</p>
-                        <div className="step-image-placeholder">
-                            <div className="placeholder-text">Image</div>
+                        <div className="step-visual">
+                            {/* Spark/Idea Animation */}
+                            <div className="idea-spark">
+                                <div className="spark-core"></div>
+                                <div className="spark-ray spark-ray-1"></div>
+                                <div className="spark-ray spark-ray-2"></div>
+                                <div className="spark-ray spark-ray-3"></div>
+                                <div className="spark-ray spark-ray-4"></div>
+                                <div className="spark-ray spark-ray-5"></div>
+                                <div className="spark-ray spark-ray-6"></div>
+                                <div className="spark-particle spark-particle-1"></div>
+                                <div className="spark-particle spark-particle-2"></div>
+                                <div className="spark-particle spark-particle-3"></div>
+                            </div>
                         </div>
                     </div>
                     <div className="step-card animate-on-scroll">
                         <div className="step-number">02</div>
                         <h3 className="step-title">Build Together</h3>
                         <p className="step-description">Get hands-on support from experienced founders. We help with product development, go-to-market strategy, and everything in between.</p>
-                        <div className="step-image-placeholder">
-                            <div className="placeholder-text">Image</div>
+                        <div className="step-visual">
+                            {/* Constellation Animation */}
+                            <div className="constellation">
+                                <div className="const-node const-node-1"></div>
+                                <div className="const-node const-node-2"></div>
+                                <div className="const-node const-node-3"></div>
+                                <div className="const-node const-node-4"></div>
+                                <div className="const-node const-node-5"></div>
+                                <svg className="const-lines" viewBox="0 0 200 150">
+                                    <line className="const-line" x1="100" y1="30" x2="50" y2="70" />
+                                    <line className="const-line" x1="100" y1="30" x2="150" y2="70" />
+                                    <line className="const-line" x1="50" y1="70" x2="70" y2="120" />
+                                    <line className="const-line" x1="150" y1="70" x2="130" y2="120" />
+                                    <line className="const-line" x1="70" y1="120" x2="130" y2="120" />
+                                    <line className="const-line" x1="50" y1="70" x2="150" y2="70" />
+                                </svg>
+                            </div>
                         </div>
                     </div>
                     <div className="step-card animate-on-scroll">
                         <div className="step-number">03</div>
                         <h3 className="step-title">Launch & Scale</h3>
                         <p className="step-description">Ship your product, acquire your first customers, and build sustainable recurring revenue with ongoing mentorship and resources.</p>
-                        <div className="step-image-placeholder">
-                            <div className="placeholder-text">Image</div>
+                        <div className="step-visual">
+                            {/* Rising Sun Animation */}
+                            <div className="rising-sun">
+                                <div className="sun-horizon"></div>
+                                <div className="sun-body">
+                                    <div className="sun-core"></div>
+                                    <div className="sun-ray sun-ray-1"></div>
+                                    <div className="sun-ray sun-ray-2"></div>
+                                    <div className="sun-ray sun-ray-3"></div>
+                                    <div className="sun-ray sun-ray-4"></div>
+                                    <div className="sun-ray sun-ray-5"></div>
+                                    <div className="sun-ray sun-ray-6"></div>
+                                    <div className="sun-ray sun-ray-7"></div>
+                                    <div className="sun-ray sun-ray-8"></div>
+                                </div>
+                                <div className="sun-glow"></div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -14,19 +14,6 @@
     position: relative;
 }
 
-.contact-hero::before {
-    content: '';
-    position: absolute;
-    top: -50px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 600px;
-    height: 400px;
-    background: var(--accent-primary-glow);
-    opacity: 0.3;
-    pointer-events: none;
-}
-
 .contact-hero-content {
     max-width: 600px;
     margin: 0 auto;

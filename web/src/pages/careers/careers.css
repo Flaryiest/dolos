@@ -14,19 +14,6 @@
     position: relative;
 }
 
-.careers-hero::before {
-    content: '';
-    position: absolute;
-    top: -50px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 500px;
-    height: 350px;
-    background: var(--accent-primary-glow);
-    opacity: 0.3;
-    pointer-events: none;
-}
-
 .careers-label {
     font-size: 0.7rem;
     font-weight: 600;
