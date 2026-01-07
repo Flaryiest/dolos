@@ -111,18 +111,19 @@
     font-size: 1.2rem;
     font-weight: 550;
     line-height: 1.5rem;
-    background: var(--accent-primary);
+    background: rgba(0, 212, 255, 0.95);
     color: var(--space-bg-primary);
     padding: 0.9rem 1.7rem;
     border-radius: 0.6rem;
     text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 20px var(--accent-primary-glow);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.15);
 }
 
 .section-one-signup-link:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 30px var(--accent-primary-glow);
+    transform: translateY(-4px) scale(1.03);
+    background: rgba(0, 212, 255, 0.9);
+    box-shadow: 0 8px 25px rgba(0, 212, 255, 0.25);
 }
 
 /* Hero Section Animations - Immediate on page load with stagger */
@@ -690,8 +691,6 @@
     padding: 5rem 2rem;
     margin-top: 0;
     width: 100%;
-    border-top: 1px solid var(--border-subtle);
-    border-bottom: 1px solid var(--border-subtle);
     position: relative;
     z-index: 1;
 }
@@ -1113,7 +1112,6 @@
     margin-top: 0;
     width: 100%;
     box-sizing: border-box;
-    border-top: 1px solid var(--border-subtle);
     position: relative;
     z-index: 1;
     display: block;
@@ -1247,7 +1245,7 @@
 .feature-card {
     background: var(--space-bg-card);
     border: 1px solid var(--border-light);
-    border-radius: 0.8rem;
+    border-radius: 0.2rem;
     padding: 1.5rem;
     transition: all 0.3s ease;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -1423,7 +1421,6 @@
 .collaborate-card {
     background: rgba(0, 212, 255, 0.05);
     border: 1px solid var(--border-accent);
-    border-radius: 12px;
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
@@ -1502,7 +1499,6 @@
 .response-card {
     background: var(--space-bg-card);
     border: 1px solid var(--border-light);
-    border-radius: 12px;
     padding: 1.5rem;
     display: flex;
     align-items: center;
@@ -1544,7 +1540,6 @@
 .messages-card {
     background: var(--space-bg-card);
     border: 1px solid var(--border-light);
-    border-radius: 12px;
     padding: 1rem;
     min-height: 350px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -1652,7 +1647,6 @@
 .inbox-card {
     background: var(--space-bg-tertiary);
     border: 1px solid var(--border-light);
-    border-radius: 12px;
     padding: 1.5rem;
     min-height: 120px;
 }
@@ -1680,7 +1674,6 @@
 .brand-card {
     background: var(--space-bg-card);
     border: 1px solid var(--border-light);
-    border-radius: 12px;
     padding: 1.5rem;
     display: flex;
     align-items: center;
@@ -1725,7 +1718,6 @@
 .summary-card {
     background: var(--space-bg-card);
     border: 1px solid var(--border-light);
-    border-radius: 12px;
     padding: 1.5rem;
     color: var(--text-primary);
     min-height: 250px;
@@ -1780,7 +1772,6 @@
 .recording-card {
     background: var(--space-bg-tertiary);
     border: 1px solid var(--border-light);
-    border-radius: 12px;
     padding: 1.5rem;
     min-height: 120px;
 }
