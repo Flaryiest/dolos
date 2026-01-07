@@ -159,7 +159,7 @@
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    background: radial-gradient(circle at center, rgba(30, 30, 35, 1) 0%, rgba(10, 10, 12, 1) 100%);
+    background: #1a1a1f;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -176,7 +176,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.03), transparent 50%);
+    background: rgba(255, 255, 255, 0.02);
 }
 
 .welcome-icon svg {
@@ -491,7 +491,7 @@
 }
 
 .success-icon {
-    background: linear-gradient(135deg, #00c853, #00e676);
+    background: #00c853;
     box-shadow: 0 0 40px rgba(0, 200, 83, 0.4);
 }
 
@@ -552,10 +552,10 @@
     align-items: center;
     gap: 0.75rem;
     padding: 1rem 2rem;
-    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary, #0066ff));
+    background: var(--accent-primary);
     border: none;
     border-radius: 8px;
-    color: white;
+    color: var(--space-bg-primary);
     font-size: 1.125rem;
     font-weight: 600;
     font-family: inherit;

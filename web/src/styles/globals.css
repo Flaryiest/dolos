@@ -138,7 +138,7 @@ table {
   --accent-primary-glow: rgba(0, 212, 255, 0.3);
   --accent-secondary: #8b5cf6;
   --accent-secondary-glow: rgba(139, 92, 246, 0.3);
-  --accent-gradient: linear-gradient(135deg, #00d4ff 0%, #8b5cf6 100%);
+  --accent-gradient: #00d4ff; /* Changed from gradient to solid */
   
   /* Text Colors */
   --text-primary: #e4e4e7;

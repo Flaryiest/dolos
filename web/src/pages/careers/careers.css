@@ -22,8 +22,8 @@
     transform: translateX(-50%);
     width: 500px;
     height: 350px;
-    background: radial-gradient(ellipse at center, var(--accent-secondary-glow), transparent 70%);
-    opacity: 0.4;
+    background: var(--accent-primary-glow);
+    opacity: 0.3;
     pointer-events: none;
 }
 
@@ -83,7 +83,7 @@
 }
 
 .filter-btn.active {
-    background: var(--accent-gradient);
+    background: var(--accent-primary);
     border-color: transparent;
     color: var(--space-bg-primary);
 }

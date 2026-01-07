@@ -22,9 +22,8 @@
     transform: translateX(-50%);
     width: 600px;
     height: 400px;
-    background: radial-gradient(ellipse at center, var(--accent-primary-glow), transparent 60%),
-                radial-gradient(ellipse at 70% 30%, var(--accent-secondary-glow), transparent 50%);
-    opacity: 0.4;
+    background: var(--accent-primary-glow);
+    opacity: 0.3;
     pointer-events: none;
 }
 

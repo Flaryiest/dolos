@@ -15,8 +15,7 @@
 }
 
 .section-one-background {
-    background: radial-gradient(ellipse at 50% 0%, rgba(0, 212, 255, 0.15) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 40%),
+    background: radial-gradient(ellipse at 50% 0%, rgba(0, 212, 255, 0.1) 0%, transparent 60%),
                 var(--space-bg-primary);
     width: 100%;
     height: 60%;
@@ -113,7 +112,7 @@
     font-size: 1.2rem;
     font-weight: 550;
     line-height: 1.5rem;
-    background: var(--accent-gradient);
+    background: var(--accent-primary);
     color: var(--space-bg-primary);
     padding: 0.9rem 1.7rem;
     border-radius: 0.6rem;
@@ -197,12 +196,7 @@
 /* Star lines - isometric cross pattern */
 .star-line {
     position: absolute;
-    background: linear-gradient(
-        to bottom,
-        transparent 0%,
-        var(--accent-primary) 50%,
-        transparent 100%
-    );
+    background: var(--accent-primary);
     opacity: 0.6;
     animation: starLinePulse 3s ease-in-out infinite;
 }
@@ -221,12 +215,7 @@
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    background: linear-gradient(
-        to right,
-        transparent 0%,
-        var(--accent-primary) 50%,
-        transparent 100%
-    );
+    background: var(--accent-primary);
 }
 
 .star-line-3 {
@@ -355,7 +344,7 @@
 
 /* Large Visual Element */
 .visual-section {
-    background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
+    background: var(--space-bg-secondary);
     padding: 4rem 2rem;
     margin-top: 2rem;
     width: 100%;
@@ -616,7 +605,7 @@
 
 .content-line {
     height: clamp(2px, 0.8vw, 4px);
-    background: linear-gradient(90deg, #f9a8d4, #fbbf24);
+    background: var(--accent-primary);
     border-radius: 2px;
     opacity: 0.7;
 }
@@ -637,10 +626,10 @@
     position: absolute;
     bottom: clamp(0.5rem, 1.5vw, 1rem);
     right: clamp(0.5rem, 1.5vw, 1rem);
-    background: linear-gradient(135deg, #f9a8d4, #fbbf24);
+    background: var(--accent-primary);
     padding: clamp(0.3rem, 1vw, 0.5rem) clamp(0.5rem, 1.5vw, 1rem);
     border-radius: 0.5rem;
-    box-shadow: 0 4px 15px rgba(249, 168, 212, 0.3);
+    box-shadow: 0 4px 15px var(--accent-primary-glow);
 }
 
 .highlight-text {
@@ -743,7 +732,7 @@
     font-size: 1rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    background: var(--accent-gradient);
+    background: var(--accent-primary);
     color: var(--space-bg-primary);
     align-self: flex-start;
     border-radius: 30%;
@@ -770,7 +759,7 @@
 }
 
 .step-image-placeholder {
-    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(139, 92, 246, 0.1));
+    background: rgba(0, 212, 255, 0.06);
     border: 2px dashed var(--border-accent);
     border-radius: 0.5rem;
     height: 220px;
@@ -787,7 +776,8 @@
 }
 
 .cta-section {
-    background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 50%, #7dd3fc 100%);
+    background: #0c1929;
+    border: 1px solid rgba(0, 212, 255, 0.2);
     padding: 4rem 2rem;
     margin-top: 10rem;
     z-index: 1;
@@ -805,14 +795,14 @@
 .cta-title {
     font-size: 2rem;
     font-weight: 600;
-    color: #1e293b;
+    color: var(--text-primary);
     margin-bottom: 1rem;
     letter-spacing: -0.02em;
 }
 
 .cta-description {
     font-size: 1.05rem;
-    color: #475569;
+    color: var(--text-secondary);
     margin-bottom: 2rem;
     line-height: 1.6;
 }
@@ -825,21 +815,21 @@
 }
 
 .cta-primary {
-    background-color: #000;
-    color: white;
+    background-color: var(--accent-primary);
+    color: var(--space-bg-primary);
     padding: 1rem 2rem;
     border-radius: 0.6rem;
     text-decoration: none;
     font-weight: 600;
     font-size: 1.1rem;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 20px var(--accent-primary-glow);
 }
 
 .cta-primary:hover {
-    background-color: #1f1f1f;
+    background-color: #00b8e6;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 30px var(--accent-primary-glow);
 }
 
 .cta-secondary {
@@ -943,7 +933,7 @@
 }
 
 .sidebar-cta {
-    background: var(--accent-gradient);
+    background: var(--accent-primary);
     color: var(--space-bg-primary);
     border: none;
     padding: 0.8rem 1.5rem;
@@ -1178,7 +1168,7 @@
 }
 
 .collaborate-card {
-    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(139, 92, 246, 0.05));
+    background: rgba(0, 212, 255, 0.05);
     border: 1px solid var(--border-accent);
     border-radius: 12px;
     padding: 1.5rem;
@@ -1257,7 +1247,7 @@
 }
 
 .response-card {
-    background: linear-gradient(135deg, var(--space-bg-tertiary), var(--space-bg-card));
+    background: var(--space-bg-card);
     border: 1px solid var(--border-light);
     border-radius: 12px;
     padding: 1.5rem;
@@ -1281,10 +1271,7 @@
 .response-number {
     font-size: 3rem;
     font-weight: 700;
-    background: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--accent-primary);
     line-height: 1;
 }
 
@@ -1438,7 +1425,7 @@
 }
 
 .brand-card {
-    background: linear-gradient(135deg, var(--space-bg-tertiary), var(--space-bg-card));
+    background: var(--space-bg-card);
     border: 1px solid var(--border-light);
     border-radius: 12px;
     padding: 1.5rem;
@@ -1467,17 +1454,14 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(ellipse at 50% 50%, var(--accent-primary-glow), transparent 70%);
-    opacity: 0.3;
+    background: var(--accent-primary-glow);
+    opacity: 0.15;
 }
 
 .brand-title {
     font-size: 1.4rem;
     font-weight: 600;
-    background: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--accent-primary);
     text-align: center;
     line-height: 1.3;
     letter-spacing: -0.01em;
@@ -1520,7 +1504,7 @@
 }
 
 .summary-button {
-    background: var(--accent-gradient);
+    background: var(--accent-primary);
     color: var(--space-bg-primary);
     border: none;
     border-radius: 6px;
