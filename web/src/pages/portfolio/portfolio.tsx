@@ -106,7 +106,7 @@ export default function PortfolioPage() {
                 <p>We're always open to connecting with investors who believe in backing the next generation of founders.</p>
                 <Link to="/contact">
                     Get in Touch
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M5 12h14m-6-6l6 6-6 6" />
                     </svg>
                 </Link>
