@@ -79,6 +79,7 @@
     width: 100%;
     aspect-ratio: 16 / 9;
     overflow: hidden;
+    position: relative;
 }
 
 .screenshot-placeholder {
@@ -91,6 +92,271 @@
     background: rgba(0, 212, 255, 0.03);
 }
 
+/* Sprint Visual Containers */
+.sprint-visual {
+    width: 100%;
+    height: 100%;
+    background: rgba(5, 5, 8, 0.95);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* ===== SOLAR SYSTEM ANIMATION ===== */
+.solar-system {
+    background: radial-gradient(ellipse at center, rgba(20, 20, 30, 1) 0%, rgba(5, 5, 8, 1) 100%);
+}
+
+.sun {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5), 0 0 60px rgba(255, 255, 255, 0.2);
+    animation: sunPulse 4s ease-in-out infinite;
+}
+
+.orbit {
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.orbit-1 {
+    width: 80px;
+    height: 80px;
+    animation: orbitRotate 8s linear infinite;
+}
+
+.orbit-2 {
+    width: 140px;
+    height: 140px;
+    animation: orbitRotate 15s linear infinite;
+}
+
+.orbit-3 {
+    width: 200px;
+    height: 200px;
+    animation: orbitRotate 25s linear infinite;
+}
+
+.planet {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.planet-1 {
+    width: 6px;
+    height: 6px;
+    opacity: 0.9;
+}
+
+.planet-2 {
+    width: 8px;
+    height: 8px;
+    opacity: 0.7;
+}
+
+.planet-3 {
+    width: 5px;
+    height: 5px;
+    opacity: 0.5;
+}
+
+.bg-star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 3s ease-in-out infinite;
+}
+
+.star-1 { top: 15%; left: 10%; animation-delay: 0s; }
+.star-2 { top: 25%; right: 15%; animation-delay: 0.5s; }
+.star-3 { bottom: 20%; left: 20%; animation-delay: 1s; }
+.star-4 { bottom: 30%; right: 10%; animation-delay: 1.5s; }
+.star-5 { top: 40%; left: 85%; animation-delay: 2s; }
+
+@keyframes sunPulse {
+    0%, 100% { box-shadow: 0 0 30px rgba(255, 255, 255, 0.5), 0 0 60px rgba(255, 255, 255, 0.2); }
+    50% { box-shadow: 0 0 40px rgba(255, 255, 255, 0.6), 0 0 80px rgba(255, 255, 255, 0.3); }
+}
+
+@keyframes orbitRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* ===== ATOM ANIMATION ===== */
+.atom-visual {
+    background: radial-gradient(ellipse at center, rgba(15, 15, 25, 1) 0%, rgba(5, 5, 8, 1) 100%);
+}
+
+.nucleus {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    animation: nucleusPulse 3s ease-in-out infinite;
+}
+
+.electron-orbit {
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+}
+
+.e-orbit-1 {
+    width: 100px;
+    height: 40px;
+    animation: electronOrbit1 12s linear infinite;
+}
+
+.e-orbit-2 {
+    width: 100px;
+    height: 40px;
+    transform: rotate(60deg);
+    animation: electronOrbit2 16s linear infinite;
+}
+
+.e-orbit-3 {
+    width: 100px;
+    height: 40px;
+    transform: rotate(-60deg);
+    animation: electronOrbit3 14s linear infinite;
+}
+
+.electron {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.e-1 {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    animation: electronMove 3s linear infinite;
+}
+
+.e-2 {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    animation: electronMove 4s linear infinite;
+}
+
+.e-3 {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    animation: electronMove 3.5s linear infinite;
+}
+
+.ambient-particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: particleFloat 5s ease-in-out infinite;
+}
+
+.p-1 { top: 20%; left: 15%; animation-delay: 0s; }
+.p-2 { bottom: 25%; right: 20%; animation-delay: 1.5s; }
+.p-3 { top: 35%; right: 12%; animation-delay: 3s; }
+
+@keyframes nucleusPulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(255, 255, 255, 0.4); }
+    50% { transform: scale(1.1); box-shadow: 0 0 30px rgba(255, 255, 255, 0.5); }
+}
+
+@keyframes electronOrbit1 {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes electronOrbit2 {
+    from { transform: rotate(60deg); }
+    to { transform: rotate(420deg); }
+}
+
+@keyframes electronOrbit3 {
+    from { transform: rotate(-60deg); }
+    to { transform: rotate(300deg); }
+}
+
+@keyframes electronMove {
+    0% { offset-distance: 0%; }
+    100% { offset-distance: 100%; }
+}
+
+@keyframes particleFloat {
+    0%, 100% { opacity: 0.2; transform: translateY(0); }
+    50% { opacity: 0.5; transform: translateY(-5px); }
+}
+
+/* Sprint Badge */
+.sprint-badge {
+    width: 32px;
+    height: 32px;
+    background: white;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--space-bg-primary);
+    flex-shrink: 0;
+}
+
+.sprint-badge.upcoming-badge {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Project Status */
+.project-status {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.375rem 0.75rem;
+    border-radius: 4px;
+}
+
+.active-status {
+    background: rgba(34, 197, 94, 0.15);
+    color: #22c55e;
+}
+
+.upcoming-status {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-muted);
+}
+
 .project-info {
     padding: 1.5rem 1.75rem 1.75rem;
 }
@@ -100,18 +366,6 @@
     align-items: center;
     gap: 0.75rem;
     margin-bottom: 0.625rem;
-}
-
-.project-logo {
-    width: 28px;
-    height: 28px;
-    background: var(--accent-primary);
-    border-radius: 4px;
-    flex-shrink: 0;
-}
-
-.project-card.upcoming .project-logo {
-    background: var(--text-muted);
 }
 
 .project-header h3 {
