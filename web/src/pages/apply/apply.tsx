@@ -95,8 +95,8 @@ function TextInputStep({
     value, 
     onChange, 
     onNext, 
-    onBack, 
-    canGoBack,
+    onBack: _onBack, 
+    canGoBack: _canGoBack,
     type = "text",
     required = true
 }: TextInputStepProps) {
@@ -147,8 +147,8 @@ function MultipleChoiceStep({
     selected,
     onChange,
     onNext,
-    onBack,
-    canGoBack,
+    onBack: _onBack,
+    canGoBack: _canGoBack,
     multiSelect = false
 }: MultipleChoiceStepProps) {
     const handleSelect = (value: string) => {
