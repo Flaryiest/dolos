@@ -73,17 +73,15 @@ export default function PortfolioPage() {
                                 {project.status === "upcoming" ? (
                                     <Link to={project.url} className="project-link">
                                         Apply
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                                            <polyline points="12 5 19 12 12 19"></polyline>
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                            <path d="M5 12h14m-6-6l6 6-6 6" />
                                         </svg>
                                     </Link>
                                 ) : (
                                     <a href={project.url} target="_blank" rel="noopener noreferrer" className="project-link">
                                         Visit
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                                            <polyline points="12 5 19 12 12 19"></polyline>
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                            <path d="M5 12h14m-6-6l6 6-6 6" />
                                         </svg>
                                     </a>
                                 )}
@@ -99,9 +97,8 @@ export default function PortfolioPage() {
                 <p>We're always open to connecting with investors who believe in backing the next generation of founders.</p>
                 <Link to="/contact">
                     Get in Touch
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M5 12h14m-6-6l6 6-6 6" />
                     </svg>
                 </Link>
             </div>

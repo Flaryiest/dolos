@@ -66,10 +66,16 @@
 }
 
 .contact-method-icon {
-    width: 36px;
-    height: 36px;
-    color: var(--accent-primary);
+    width: 32px;
+    height: 32px;
+    color: white;
     flex-shrink: 0;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+.contact-method:hover .contact-method-icon {
+    opacity: 1;
 }
 
 .contact-method-icon svg {
@@ -144,11 +150,17 @@
 }
 
 .who-icon {
-    width: 28px;
-    height: 28px;
-    color: var(--accent-primary);
+    width: 24px;
+    height: 24px;
+    color: white;
     flex-shrink: 0;
-    margin-top: 0.125rem;
+    margin-top: 0.25rem;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.who-item:hover .who-icon {
+    opacity: 1;
 }
 
 .who-icon svg {
@@ -194,9 +206,9 @@
 }
 
 .social-inline a {
-    width: 36px;
-    height: 36px;
-    color: var(--text-muted);
+    width: 32px;
+    height: 32px;
+    color: rgba(255, 255, 255, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -204,12 +216,12 @@
 }
 
 .social-inline a:hover {
-    color: var(--accent-primary);
+    color: white;
 }
 
 .social-inline a svg {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
 }
 
 /* Responsive */
